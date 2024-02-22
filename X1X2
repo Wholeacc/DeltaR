@@ -1,1 +1,39 @@
+# Harmonic Code 2
+import numpy as np
+import matplotlib.pyplot as plt
+
+def convert_to_harmonic_function(expression, x_values):
+    """
+    Convert an expression to a harmonic function and plot the graph.
+
+    Parameters:
+    - expression: A mathematical expression as a string.
+    - x_values: A list of x values for plotting the graph.
+    """
+    try:
+        # Convert the expression to a harmonic function
+        harmonic_function = eval(expression)
+
+        # Plot the harmonic function
+        plt.plot(x_values, harmonic_function, label=f'Harmonic Function: {expression}')
+        plt.xlabel('x')
+        plt.ylabel('y')
+        plt.title('Harmonic Function')
+        plt.legend()
+        plt.grid(True)
+        plt.show()
+
+    except Exception as e:
+        print(f"Error: {e}")
+
+# Example usage:
+if __name__ == "__main__":
+    # Example expression: x^2 + 2 * sin(x)
+    expression = "x**2 + 2 * np.sin(x)"
+
+    # Generate x values for the plot
+    x_values = np.linspace(-10, 10, 1000)
+
+    # Convert expression to harmonic function and plot the graph
+    convert_to_harmonic_function(expression, x_values)
 
