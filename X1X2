@@ -1,4 +1,4 @@
-# Harmonic Code 31-1
+# Harmonic Code 31
 import numpy as np
 import matplotlib.pyplot as plt
 
